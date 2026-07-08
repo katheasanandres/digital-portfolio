@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kathea Kim Portfolio</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Be+Vietnam+Pro:ital,wght@0,400;1,400&amp;family=Space+Mono:wght@400;700&amp;family=Satisfy&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f5f4ec",
+                    "inverse-surface": "#30312c",
+                    "on-secondary-container": "#247155",
+                    "background": "#fbf9f1",
+                    "on-background": "#1b1c17",
+                    "on-secondary-fixed": "#002115",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad2",
+                    "surface-container-highest": "#e4e3db",
+                    "surface-container": "#f0eee6",
+                    "surface-bright": "#fbf9f1",
+                    "tertiary-fixed-dim": "#f0bd8b",
+                    "on-primary-fixed-variant": "#6f3157",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#eab785",
+                    "inverse-on-surface": "#f3f1e9",
+                    "on-surface": "#1b1c17",
+                    "secondary": "#1b6b4f",
+                    "primary-fixed": "#ffd8ea",
+                    "on-tertiary-container": "#6b471f",
+                    "on-tertiary-fixed": "#2c1600",
+                    "surface": "#fbf9f1",
+                    "on-surface-variant": "#514349",
+                    "on-secondary-fixed-variant": "#00513a",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eae8e0",
+                    "error": "#ba1a1a",
+                    "primary-container": "#f9a8d4",
+                    "primary": "#8a486f",
+                    "primary-fixed-dim": "#ffaeda",
+                    "on-primary-fixed": "#3a0329",
+                    "secondary-fixed-dim": "#8bd6b4",
+                    "surface-tint": "#8a486f",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#a6f2cf",
+                    "outline-variant": "#d5c1c9",
+                    "on-primary-container": "#78395f",
+                    "on-tertiary-fixed-variant": "#623f18",
+                    "outline": "#83737a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdcbd",
+                    "surface-variant": "#e4e3db",
+                    "inverse-primary": "#ffaeda",
+                    "tertiary": "#7d562d",
+                    "secondary-container": "#a6f2cf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "gutter": "24px",
+                    "container-margin": "clamp(1rem, 5vw, 4rem)",
+                    "xl": "40px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "unit": "4px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Bricolage Grotesque"],
+                    "headline-md": ["Bricolage Grotesque"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-sm": ["Space Mono"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "display-lg-mobile": ["Bricolage Grotesque"],
+                    "handwriting": ["Satisfy", "cursive"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        
+        /* Gingham Pattern */
+        .bg-gingham {
+            background-color: #ffffff;
+            background-image: 
+                linear-gradient(90deg, rgba(249, 168, 212, 0.2) 50%, transparent 50%),
+                linear-gradient(rgba(249, 168, 212, 0.2) 50%, transparent 50%);
+            background-size: 40px 40px;
+        }
+
+        /* Corkboard Texture */
+        .bg-cork {
+            background-color: #d2b48c;
+            background-image: radial-gradient(#bc9a70 10%, transparent 10%), radial-gradient(#bc9a70 10%, transparent 10%);
+            background-size: 15px 15px;
+            background-position: 0 0, 7.5px 7.5px;
+        }
+
+        /* Notebook Paper Effect */
+        .notebook-paper {
+            background: #fff;
+            background-image: linear-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 100% 1.5rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+        .notebook-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 2.5rem;
+            width: 2px;
+            height: 100%;
+            background: #fca5a5;
+        }
+
+        /* Torn Edge Effect (CSS Mask/Clip) */
+        .torn-edge {
+            mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 Q5,5 10,0 T20,0 T30,0 T40,0 T50,0 T60,0 T70,0 T80,0 T90,0 T100,0 L100,100 Q95,95 90,100 T80,100 T70,100 T60,100 T50,100 T40,100 T30,100 T20,100 T10,100 T0,100 Z" fill="black"/></svg>');
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 Q5,5 10,0 T20,0 T30,0 T40,0 T50,0 T60,0 T70,0 T80,0 T90,0 T100,0 L100,100 Q95,95 90,100 T80,100 T70,100 T60,100 T50,100 T40,100 T30,100 T20,100 T10,100 T0,100 Z" fill="black"/></svg>');
+        }
+
+        .scalloped {
+            mask-image: radial-gradient(circle at 10px 10px, transparent 10px, black 11px);
+            mask-size: 20px 20px;
+        }
+
+        .washi-tape {
+            background: rgba(166, 242, 207, 0.6);
+            backdrop-filter: blur(1px);
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .dymo-label {
+            background: #1b1c17;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 2px;
+            box-shadow: inset 0 -2px 0 rgba(0,0,0,0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .sticky-note {
+            transition: transform 0.2s ease-in-out;
+        }
+        .sticky-note:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            z-index: 40;
+        }
+
+        .icon-btn:focus-visible,
+        .sticky-note:focus-visible,
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #1b6b4f;
+            outline-offset: 2px;
+        }
+        /* Email Popup */
+        .email-popup {
+            position: absolute;
+            bottom: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%) scale(0.9);
+            background: #1b1c17;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s, transform 0.2s;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            cursor: pointer;
+            z-index: 100;
+        }
+        .email-popup::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #1b1c17;
+        }
+        .email-popup.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) scale(1);
+        }
+        /* Copy Toast */
+        .copy-toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: #1b6b4f;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 200;
+            pointer-events: none;
+        }
+        .copy-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: rgba(27,28,23,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 70;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-menu-panel {
+            position: absolute;
+            top: 0; right: 0;
+            width: 260px;
+            height: 100%;
+            background: #fbf9f1;
+            box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+            transform: translateX(100%);
+            transition: transform 0.3s;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .mobile-menu.open .mobile-menu-panel {
+            transform: translateX(0);
+        }
+        .mobile-menu-panel a {
+            display: block;
+            padding: 12px 16px;
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            color: #1b1c17;
+            border-radius: 8px;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .mobile-menu-panel a:hover {
+            background: #eae8e0;
+        }
+        /* Cert Card clickable */
+        .cert-card {
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            border-radius: 4px;
+            padding: 8px;
+            margin: -8px;
+        }
+        .cert-card:hover {
+            background: rgba(138, 72, 111, 0.06);
+            transform: translateX(2px);
+        }
+        .cert-card .view-hint {
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .cert-card:hover .view-hint {
+            opacity: 1;
+        }
+        /* PDF Preview Modal */
+        .cert-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 300;
+            background: rgba(27,28,23,0.7);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .cert-modal.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .cert-modal-content {
+            background: #fff;
+            border-radius: 12px;
+            width: 90vw;
+            max-width: 800px;
+            height: 85vh;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: scale(0.95) translateY(10px);
+            transition: transform 0.3s;
+        }
+        .cert-modal.open .cert-modal-content {
+            transform: scale(1) translateY(0);
+        }
+        .cert-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px dashed #d5c1c9;
+        }
+        .cert-modal-header h3 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #1b1c17;
+        }
+        .cert-modal-close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            display: flex;
+        }
+        .cert-modal-close:hover {
+            background: #eae8e0;
+        }
+        .cert-modal-body {
+            flex: 1;
+            overflow: hidden;
+        }
+        .cert-modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-[60] px-gutter py-md">
+<nav class="max-w-7xl mx-auto flex justify-between items-center bg-transparent">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg font-bold text-primary dark:text-primary-fixed-dim rotate-[-2deg] bg-surface-container-lowest px-4 py-1 shadow-[4px_4px_0px_0px_rgba(60,40,30,0.15)]">
+                SCRAPBOOK
+            </div>
+<div class="hidden md:flex space-x-md items-end">
+<a class="text-on-surface bg-surface-container-high rounded-t-lg px-4 py-2 hover:translate-y-[-2px] transition-transform font-label-sm text-label-sm" href="#home">About Me</a>
+<a class="text-on-surface bg-surface-container-high rounded-t-lg px-4 py-2 hover:translate-y-[-2px] transition-transform font-label-sm text-label-sm" href="#skills">Skills</a>
+<a class="text-on-surface bg-surface-container-high rounded-t-lg px-4 py-2 hover:translate-y-[-2px] transition-transform font-label-sm text-label-sm" href="#projects">Projects</a>
+<a class="text-on-surface bg-surface-container-high rounded-t-lg px-4 py-2 hover:translate-y-[-2px] transition-transform font-label-sm text-label-sm" href="#contact">Contact</a>
+</div>
+<button id="mobile-menu-btn" class="md:hidden bg-primary p-2 rounded-xl text-on-primary shadow-md">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="mobile-menu md:hidden">
+<div class="mobile-menu-panel">
+<button id="mobile-menu-close" class="self-end mb-4 p-2"><span class="material-symbols-outlined">close</span></button>
+<a href="#home" class="mobile-nav-link">About Me</a>
+<a href="#skills" class="mobile-nav-link">Skills</a>
+<a href="#projects" class="mobile-nav-link">Projects</a>
+<a href="#contact" class="mobile-nav-link">Contact</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Section 1: Hero & About Me -->
+<section class="min-h-screen bg-gingham pt-32 pb-xl px-gutter relative overflow-hidden" id="home">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
+<!-- Hero Heading & About -->
+<div class="lg:col-span-7 space-y-lg z-10">
+<div class="inline-block relative">
+<!-- Pin Graphic -->
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 w-6 h-6 bg-primary rounded-full shadow-lg border-2 border-on-primary-fixed-variant z-20">
+<div class="w-2 h-2 bg-white/40 rounded-full absolute top-1 left-1"></div>
+</div>
+<h1 class="font-handwriting text-8xl text-primary bg-white px-8 py-4 shadow-[8px_8px_0px_0px_rgba(60,40,30,0.15)] rotate-[-1deg] border border-outline-variant">
+                            Kathea Kim Anjie San Andres
+                        </h1>
+</div>
+<div class="relative group">
+<!-- Torn Notebook Paper -->
+<div class="notebook-paper p-md pt-lg shadow-xl rotate-[1deg] max-w-xl border border-outline-variant torn-edge">
+<h2 class="font-headline-md text-headline-md text-secondary mb-md">Computer Science Student</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-loose">
+                                I'm a computer science student with a passion for creating innovative digital solutions. I specialize in web development and enjoy building projects that push the boundaries of what's possible. My goal is to create seamless and intuitive user experiences that leave a lasting impression.
+                            </p>
+</div>
+<!-- Tape holding it -->
+<div class="washi-tape absolute -top-4 -right-4 w-24 h-8 rotate-[15deg] z-20"></div>
+</div>
+</div>
+<!-- Polaroid Image -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end relative">
+<div class="relative rotate-[4deg] hover:rotate-0 transition-transform duration-500 z-10">
+<!-- Washi Tape -->
+<div class="washi-tape absolute -top-6 left-1/2 -translate-x-1/2 w-32 h-10 rotate-[-5deg] z-20"></div>
+<div class="bg-white p-4 pb-12 shadow-[12px_12px_24px_rgba(60,40,30,0.2)] border border-outline-variant">
+<img class="w-72 h-80 object-cover grayscale-[0.2] sepia-[0.1]" alt="Kathea Kim Anjie San Andres" src="src/images/kathie.jpg"/>
+<p class="font-handwriting text-2xl text-on-surface-variant text-center mt-4">Working on something new...</p>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -bottom-10 -left-10 opacity-40">
+<span class="material-symbols-outlined text-8xl text-primary-fixed-dim">draw</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Skills & Tech Stacks -->
+<section class="py-xl px-gutter bg-cork relative min-h-[80vh]" id="skills">
+<!-- Section Header on a Scrap of Paper -->
+<div class="max-w-7xl mx-auto mb-xl relative">
+<div class="bg-surface-container-low px-8 py-4 rotate-[-2deg] shadow-md inline-block border-b-2 border-r-2 border-outline/20">
+<h2 class="font-display-lg text-display-lg text-tertiary">My Skills</h2>
+</div>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl relative">
+<!-- Skills Sticky Notes Scattered -->
+<div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-md p-md">
+<!-- Design Note -->
+<div class="sticky-note bg-[#fef08a] p-4 shadow-lg rotate-[-3deg] min-h-[168px] flex flex-col justify-center items-center text-center border-b-4 border-r-4 border-yellow-600/20">
+<span class="material-symbols-outlined text-4xl mb-2" data-weight="fill">palette</span>
+<h3 class="font-label-sm text-label-sm font-bold text-yellow-900">Design</h3>
+<p class="font-handwriting text-sm leading-snug text-yellow-800 mt-1">Figma, Adobe Photoshop, Adobe Illustrator, Canva, Krita, ibisPaint X</p>
+</div>
+<!-- Frontend Note -->
+<div class="sticky-note bg-[#bae6fd] p-4 shadow-lg rotate-[2deg] min-h-[168px] flex flex-col justify-center items-center text-center border-b-4 border-r-4 border-blue-600/20">
+<span class="material-symbols-outlined text-4xl mb-2" data-weight="fill">code</span>
+<h3 class="font-label-sm text-label-sm font-bold text-blue-900">Frontend</h3>
+<p class="font-handwriting text-sm leading-snug text-blue-800 mt-1">React, Tailwind, HTML 5, CSS 3, Vite</p>
+</div>
+<!-- Backend Note -->
+<div class="sticky-note bg-[#fbcfe8] p-4 shadow-lg rotate-[-1deg] min-h-[168px] flex flex-col justify-center items-center text-center border-b-4 border-r-4 border-pink-600/20">
+<span class="material-symbols-outlined text-4xl mb-2" data-weight="fill">database</span>
+<h3 class="font-label-sm text-label-sm font-bold text-pink-900">Backend</h3>
+<p class="font-handwriting text-sm leading-snug text-pink-800 mt-1">Node, Python, C, JavaScript, Node.js</p>
+</div>
+<!-- Database Note -->
+<div class="sticky-note bg-[#a7f3d0] p-4 shadow-lg rotate-[4deg] min-h-[168px] flex flex-col justify-center items-center text-center border-b-4 border-r-4 border-green-600/20">
+<span class="material-symbols-outlined text-4xl mb-2" data-weight="fill">storage</span>
+<h3 class="font-label-sm text-label-sm font-bold text-green-900">Database</h3>
+<p class="font-handwriting text-lg text-green-800 mt-1">Firebase, My SQL</p>
+</div>
+
+<!-- Empty Note / Deco -->
+<div class="bg-white/10 border-2 border-dashed border-white/20 p-6 min-h-[168px] flex items-center justify-center rotate-[1deg]">
+<span class="material-symbols-outlined text-white/30 text-6xl">add</span>
+</div>
+</div>
+<!-- Certificates Clipboard -->
+<div class="lg:col-span-1 relative flex justify-center">
+<div class="bg-[#8b4513] w-full max-w-sm rounded-lg p-1 shadow-2xl relative">
+<!-- Clipboard Clip -->
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 w-32 h-12 bg-surface-container-highest rounded-t-xl shadow-inner border-t-4 border-outline-variant flex items-center justify-center z-20">
+<div class="w-16 h-4 bg-outline/20 rounded-full"></div>
+</div>
+<div class="bg-[#fdfbf7] min-h-[500px] mt-8 mb-4 mx-4 p-md shadow-inner flex flex-col gap-md">
+<h4 class="font-label-sm text-label-sm text-outline border-b border-dashed border-outline-variant pb-2">CERTIFICATES</h4>
+<!-- Cert 1: HTML Essentials -->
+<div class="cert-card border-b border-outline-variant pb-md" onclick="previewCert('src/certs/HTML.pdf', 'CISCO NetCad: HTML Essentials')">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-headline-md text-body-lg text-tertiary">CISCO NetCad: HTML Essentials</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • April 23, 2026</p>
+</div>
+<span class="material-symbols-outlined text-primary/50 view-hint" title="View Certificate">visibility</span>
+</div>
+</div>
+<!-- Cert 2: CSS Essentials -->
+<div class="cert-card border-b border-outline-variant pb-md" onclick="previewCert('src/certs/CSS.pdf', 'CISCO NetCad: CSS Essentials')">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-headline-md text-body-lg text-tertiary">CISCO NetCad: CSS Essentials</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • April 23, 2026</p>
+</div>
+<span class="material-symbols-outlined text-primary/50 view-hint" title="View Certificate">visibility</span>
+</div>
+</div>
+<!-- Cert 3: Python Essentials 1 -->
+<div class="cert-card border-b border-outline-variant pb-md" onclick="previewCert('src/certs/PE1.pdf', 'CISCO NetCad: Python Essentials 1')">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-headline-md text-body-lg text-tertiary">CISCO NetCad: Python Essentials 1</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • April 23, 2026</p>
+</div>
+<span class="material-symbols-outlined text-primary/50 view-hint" title="View Certificate">visibility</span>
+</div>
+</div>
+<!-- Cert 4: Python Essentials 2 -->
+<div class="cert-card" onclick="previewCert('src/certs/PE2.pdf', 'CISCO NetCad: Python Essentials 2')">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-headline-md text-body-lg text-tertiary">CISCO NetCad: Python Essentials 2</h5>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Completed • April 23, 2026</p>
+</div>
+<span class="material-symbols-outlined text-primary/50 view-hint" title="View Certificate">visibility</span>
+</div>
+</div>
+<!-- Scribbles -->
+<div class="mt-auto text-right">
+<span class="font-handwriting text-3xl text-primary/40 -rotate-12 inline-block">Keep going!</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Projects Portfolio -->
+<section class="py-xl bg-[#e8f5e9] relative" id="projects">
+<!-- Torn Edge Transition -->
+<div class="absolute top-0 left-0 w-full h-12 bg-cork torn-edge scale-y-[-1] z-10"></div>
+<div class="max-w-7xl mx-auto px-gutter pt-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div>
+<h2 class="font-display-lg text-display-lg text-secondary">My Projects</h2>
+<p class="font-body-lg text-body-lg text-on-secondary-fixed-variant mt-2 max-w-md">Projects that showcases my passion for computer science.</p>
+</div>
+<div class="dymo-label font-label-sm">VOL_01_2024</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+<!-- Project Card: AfterHours -->
+<a href="https://afterhours-peach.vercel.app" target="_blank" rel="noopener noreferrer" class="group cursor-pointer block">
+<div class="bg-white p-4 shadow-[10px_10px_0px_0px_rgba(27,107,79,0.15)] rotate-[-1deg] group-hover:rotate-0 group-hover:translate-y-[-8px] transition-all duration-300">
+<div class="relative overflow-hidden aspect-[4/3] scalloped border border-outline-variant bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-8xl text-secondary/30">map</span>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-white text-primary px-4 py-2 font-label-sm rounded-full">VIEW PROJECT</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-6">AfterHours</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 italic">GPS / Map</p>
+<div class="mt-4 flex gap-2 flex-wrap">
+<span class="px-2 py-1 bg-surface-container-high font-label-sm text-[10px] rounded border border-outline/10">REACT</span>
+<span class="px-2 py-1 bg-surface-container-high font-label-sm text-[10px] rounded border border-outline/10">PYTHON</span>
+<span class="px-2 py-1 bg-surface-container-high font-label-sm text-[10px] rounded border border-outline/10">FIREBASE</span>
+<span class="px-2 py-1 bg-surface-container-high font-label-sm text-[10px] rounded border border-outline/10">FLASK</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Decorative "Scraps" -->
+<div class="absolute bottom-10 left-10 w-24 h-24 bg-primary-container rotate-[15deg] opacity-20 torn-edge"></div>
+<div class="absolute top-1/2 right-0 w-32 h-40 bg-secondary-container rotate-[-10deg] opacity-20 torn-edge"></div>
+</section>
+<!-- Section 4: Contact/Footer -->
+<section class="py-xl bg-surface-container-lowest relative overflow-hidden" id="contact">
+<div class="max-w-4xl mx-auto px-gutter relative z-10 text-center">
+<div class="inline-block relative mb-lg">
+<span class="material-symbols-outlined text-6xl text-primary absolute -top-12 -left-12 rotate-[-15deg]">mail</span>
+<h2 class="font-display-lg text-display-lg text-primary">Say Hello!</h2>
+</div>
+<div class="bg-white p-xl shadow-2xl rotate-[0.5deg] border border-outline-variant relative">
+<!-- Paper Clip -->
+<div class="absolute -top-4 right-12 w-8 h-16 border-4 border-outline rounded-full opacity-60"></div>
+<p class="font-body-lg text-body-lg mb-xl text-on-surface-variant">
+                        I'm currently looking for new opportunities about design and tech. Drop me a message!
+                    </p>
+<div class="flex gap-md justify-center">
+<!-- Email Icon with Hover Popup -->
+<div class="relative" id="email-wrapper">
+<div class="email-popup" id="email-popup" onclick="copyEmail()">katheasanandres@gmail.com</div>
+<a aria-label="Email me" class="icon-btn w-12 h-12 bg-surface-container-high flex items-center justify-center rounded hover:bg-primary-fixed transition-colors" href="javascript:void(0)" id="email-icon">
+<span class="material-symbols-outlined text-primary" aria-hidden="true">mail</span>
+</a>
+</div>
+<a aria-label="GitHub" class="icon-btn w-12 h-12 bg-surface-container-high flex items-center justify-center rounded hover:bg-primary-fixed transition-colors" href="https://github.com/katheasanandres" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+</svg>
+</a>
+<a aria-label="LinkedIn" class="icon-btn w-12 h-12 bg-surface-container-high flex items-center justify-center rounded hover:bg-primary-fixed transition-colors" href="https://www.linkedin.com/in/kathea-san-andres-9a7533420/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+</svg>
+</a>
+</div>
+</div>
+<div class="mt-xl">
+<span class="font-handwriting text-2xl text-secondary">Looking forward to hearing from you!</span>
+</div>
+</div>
+<!-- Background Scribble Deco -->
+<div class="absolute bottom-0 right-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]">auto_fix</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-gutter flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-lowest dark:bg-inverse-surface border-t-2 border-dashed border-outline-variant">
+<div class="font-display-lg text-headline-md text-secondary">KATHIE</div>
+<div class="font-body-md text-body-md italic text-tertiary dark:text-tertiary-fixed-dim">
+            Hand-crafted with love &amp; ink © 2024
+        </div>
+</footer>
+<!-- Copy Toast -->
+<div class="copy-toast" id="copy-toast">Email copied to clipboard!</div>
+<!-- Certificate Preview Modal -->
+<div class="cert-modal" id="cert-modal">
+<div class="cert-modal-content">
+<div class="cert-modal-header">
+<h3 id="cert-modal-title">Certificate</h3>
+<button class="cert-modal-close" onclick="closeCertModal()"><span class="material-symbols-outlined">close</span></button>
+</div>
+<div class="cert-modal-body">
+<iframe id="cert-modal-iframe" src=""></iframe>
+</div>
+</div>
+</div>
+<script>
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.length > 1) {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Interactive "Pinned" items
+        const notes = document.querySelectorAll('.sticky-note');
+        notes.forEach(note => {
+            note.addEventListener('mousedown', () => {
+                note.style.transform = 'scale(0.95)';
+            });
+            note.addEventListener('mouseup', () => {
+                note.style.transform = 'scale(1.05)';
+            });
+        });
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuClose = document.getElementById('mobile-menu-close');
+        function openMenu() { mobileMenu.classList.add('open'); }
+        function closeMenu() { mobileMenu.classList.remove('open'); }
+        menuBtn.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        mobileMenu.addEventListener('click', (e) => { if (e.target === mobileMenu) closeMenu(); });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Email Popup on Hover
+        const emailWrapper = document.getElementById('email-wrapper');
+        const emailPopup = document.getElementById('email-popup');
+        let hideTimeout;
+        emailWrapper.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+            emailPopup.classList.add('visible');
+        });
+        emailWrapper.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => emailPopup.classList.remove('visible'), 150);
+        });
+        emailPopup.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+        emailPopup.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => emailPopup.classList.remove('visible'), 150);
+        });
+
+        // Copy Email
+        function copyEmail() {
+            navigator.clipboard.writeText('katheasanandres@gmail.com').then(() => {
+                const toast = document.getElementById('copy-toast');
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2000);
+            });
+        }
+
+        // Certificate Preview Modal
+        function previewCert(pdfPath, title) {
+            document.getElementById('cert-modal-title').textContent = title;
+            document.getElementById('cert-modal-iframe').src = pdfPath;
+            document.getElementById('cert-modal').classList.add('open');
+        }
+        function closeCertModal() {
+            const modal = document.getElementById('cert-modal');
+            modal.classList.remove('open');
+            setTimeout(() => { document.getElementById('cert-modal-iframe').src = ''; }, 300);
+        }
+        document.getElementById('cert-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('cert-modal')) closeCertModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeCertModal();
+        });
+    </script>
+</body></html>
