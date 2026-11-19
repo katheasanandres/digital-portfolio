@@ -1,11 +1,10 @@
-
 import React, { useState } from "react";
 
 import SectionModal from "./components/SectionModal";
 import ChocolateBox from "./components/ChocolateBox";
 
 import About from "./sections/About";
-import CaseStudy from "./sections/CaseStudy";
+import Experiences from "./sections/Experiences";
 import Contact from "./sections/Contact";
 import Extras from "./sections/Extras";
 import Projects from "./sections/Projects";
@@ -16,9 +15,9 @@ const sections = {
     title: "About Me",
     content: <About />,
   },
-  "case-study": {
-    title: "Case Study",
-    content: <CaseStudy />,
+  experience: {
+    title: "Experiences",
+    content: <Experiences />,
   },
   contact: {
     title: "Contact",

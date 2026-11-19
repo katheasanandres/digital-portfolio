@@ -6,7 +6,7 @@ const chocolateSections = [
   { id: "about", label: "About Me", shape: "round" },
   { id: "skills", label: "Skills", shape: "flower" },
   { id: "projects", label: "Projects", shape: "square" },
-  { id: "case-study", label: "Case Study", shape: "heart" },
+  { id: "experience", label: "Experiences", shape: "heart" },
   { id: "contact", label: "Contact", shape: "round" },
   { id: "extras", label: "Extras", shape: "flower" },
 ];

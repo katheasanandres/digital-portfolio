@@ -1,5 +1,5 @@
 import React from "react";
-import kathieImage from "../images/kathie.jpg";
+import kathea from "../images/kathea.jpg";
 
 const aboutDetails = [
   {
@@ -26,8 +26,8 @@ function About() {
       <div className="about-intro">
         <div className="about-photo-frame">
           <img
-            src={kathieImage}
-            alt="Portrait of Kathea"
+            src={kathea}
+            alt="Pic of Meeeeeeee"
             className="about-photo"
           />
           <span className="about-photo-star" aria-hidden="true">

@@ -1,4 +1,3 @@
-
 import React from "react";
 
 function Skills() {
@@ -8,12 +7,32 @@ function Skills() {
       skills: ["Python", "C", "JavaScript", "SQL", "Rust", "PHP"],
     },
     {
-      title: "WEB DEVELOPMENT",
-      skills: ["HTML", "CSS", "React"],
+      title: "WEB DEVELOPMENT & FRAMEWORKS",
+      skills: ["HTML", "CSS", "React", "Tailwind CSS", "Vite", "Flask"],
     },
     {
-      title: "TOOLS & SOFTWARE",
-      skills: ["VS Code", "GitHub", "Figma", "Adobe Photoshop", "Adobe Illustrator"],
+      title: "DATABASES, TOOLS & SOFTWARE",
+      skills: [
+        "MySQL",
+        "Google Firestore",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+      ],
+    },
+    {
+      title: "WRITING & JOURNALISM",
+      skills: [
+        "Journalism",
+        "Editorial Writing",
+        "Feature Writing",
+        "Creative Writing",
+        "Copywriting",
+        "Content Writing",
+      ],
     },
   ];
 
